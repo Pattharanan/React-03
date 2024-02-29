@@ -1,5 +1,6 @@
 import Contact from "./assets/Contact";
 import Hello from "./assets/Hello";
+import Counter from "./assets/Counter";
 
 function App() {
   console.log('App component');
@@ -9,14 +10,15 @@ function App() {
     {name: "Thor", message: "Good evening"},
   ]
   return (
-      <div>
+      <div className='App' > 
+      <Counter/>
         {helloData.map((data, index) => (
           <Hello key = {index} name = {data.name} message = {data.message}/>
         ))}
 
         <Contact phone = "1234567890" email = "Pattharanan@gmail.com"/>
       </div>
-  )
+  );
 }
 
-export default App
+export default App;
